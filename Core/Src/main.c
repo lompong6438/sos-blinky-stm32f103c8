@@ -113,25 +113,25 @@ int main(void)
     /* USER CODE BEGIN 3 */
 	int morse_interval = 200; // 200ms aralıklarla yanıp sönecek LED
 
-	/* Önce bir S harfi ile başloıyoruz, 3 adet nokta basacağız. */
+	/* Letter S (...) */
 	write_dot_and_delay(morse_interval);
 	write_dot_and_delay(morse_interval);
-	write_dot_and_delay(morse_interval);
+	write_dot_and_delay(morse_interval); // This line will have 1 interval delay after
 
-	/* Harfler arası boşluğumuz 3 interval olacak, yukarıda 1 birim bekliyoruz zaten */
+	/* Interval between letters, total of 3 intervals including the last write_dot_and_delay */
 	HAL_Delay(morse_interval * 2);
 
-	/* Şimdi O harfi yazıyoruz, üç çizgi basacağız */
+	/* Letter O (---) */
 	write_dash_and_delay(morse_interval);
 	write_dash_and_delay(morse_interval);
 	write_dash_and_delay(morse_interval);
 
-	/* Ve tekrar bir S harfi: (...) */
+	/* Letter S (...) */
 	write_dot_and_delay(morse_interval);
 	write_dot_and_delay(morse_interval);
-	write_dot_and_delay(morse_interval);
+	write_dot_and_delay(morse_interval); // This line will have 1 interval delay after
 
-	/* En sonda da söndürelim LED'i, kelime sonu boşluğu toplam 7 interval, yukarıda 1 birim bekliyoruz */
+	/* Then wait for total of 7 intervals after the last write_dot_and_delay and repeat */
 	HAL_Delay(morse_interval * 6);
   }
   /* USER CODE END 3 */
@@ -239,3 +239,4 @@ void assert_failed(uint8_t *file, uint32_t line)
   /* USER CODE END 6 */
 }
 #endif /* USE_FULL_ASSERT */
+
